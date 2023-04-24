@@ -4,11 +4,9 @@
 
 The purpose of this tool is to convert emojis in an HTML file to base64 images. 
 
-It was created to address a specific use case where the user sends an HTML file with emojis to their HP printer's email address, but the printer cannot print the emojis and instead prints empty boxes.
-
 ## Background
 
-The creator of this tool had a specific need for it. They had a cron job that sent an HTML file with emojis to their HP printer's email address for daily printing. However, the printer could not print emojis and instead printed empty boxes. 
+The creator of this tool had a cron job that sent an HTML file with emojis to their HP printer's email address for daily printing. However, the printer could not print emojis and instead printed empty boxes. 
 
 This is where this tool comes in - it converts the emojis in the HTML file to base64 images, making them printable on the HP printer.
 
