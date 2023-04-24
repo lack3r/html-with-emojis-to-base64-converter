@@ -14,6 +14,10 @@ This is where this tool comes in - it converts the emojis in the HTML file to ba
 
 Using the tool is simple. Open `index.html` and select the HTML file you want to convert using the dropdown. Once the file is selected, all emojis in the file will be converted to base64 images.
 
+## Instructions
+
+Due to the fact that the HTML file downloads another HTML file, it most probably will hit the CORS policy on the browser. You can run the website as a web application. This for example can be done by using the [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) plugin on visual studio code.
+
 ## Notes
 
 - This tool was designed for a specific use case and may have limited functionality beyond its intended purpose.
