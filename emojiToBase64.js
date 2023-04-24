@@ -19,29 +19,15 @@ fileInput.addEventListener("change", async () => {
   };
 });
 
-
 async function emojiToBase64Image(emoji, fontSize) {
     const canvas = document.createElement("canvas");
-    canvas.width = fontSize * 1.75;
-    canvas.height = fontSize * 1.75;
-
-    const ctx = canvas.getContext("2d");
-    ctx.font = `${fontSize}px sans-serif`;
-    ctx.fillText(emoji, 0, fontSize);
-
-    const dataURL = canvas.toDataURL("image/png");
-    return dataURL;
-}
-
-async function emojiToBase64Image(emoji, fontSize) {
-    const canvas = document.createElement("canvas");
-    canvas.width = fontSize * 1.5;
-    canvas.height = fontSize * 1.5;
+    canvas.width = fontSize * 1.4;
+    canvas.height = fontSize * 1.4;
   
     const ctx = canvas.getContext("2d");
     ctx.font = `${fontSize}px sans-serif`;
     ctx.textBaseline = "top"; // Align text to the top left corner
-    ctx.fillText(emoji, 2, 2);
+    ctx.fillText(emoji, 1, 2);
   
     const dataURL = canvas.toDataURL("image/png");
     return dataURL;
@@ -57,7 +43,7 @@ async function replaceEmojisWithBase64Images() {
     const fontSize = parseInt(style.getPropertyValue("font-size"), 10);
 
     const emojis = textContent.match(emojiRegex);
-    const scalingFactor = 1.5;
+    const scalingFactor = 1.2;
 
     const emojiBase64Map = new Map();
 
@@ -131,7 +117,6 @@ function removeEmojiStyleTags(htmlContent, styleTags) {
         const fullTag = match[0];
         const openTag = match[1];
         const content = match[2];
-        const closeTag = match[3];
 
         if (styleTags.includes(openTag) && emojiRegex.test(content)) {
             result = result.replace(fullTag, content);
